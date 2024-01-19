@@ -23,7 +23,7 @@ Please Note that tox is configured with python 3.8,3.9, and 3.10. Feel free to r
  $ cd <repo_name>
  $ virtualenv venv
  $ source venv/bin/activate
- $ pip install -e .['testing']
+ $ pip install -e ".[dev]"
 ``` 
 ## Implementations
 
