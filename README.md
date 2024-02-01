@@ -8,15 +8,6 @@ This is a template for a python project with the src layout. It has setup.cfg an
 Please Note that tox is configured with python 3.8,3.9, and 3.10. Feel free to reconfigure everything to your need.
 
 
-## Table of Contents (Deprecated)
-
-- [Project Name](#project-name)
-  - [Table of Contents (Deprecated)](#table-of-contents-deprecated)
-  - [Installation/Usage](#installationusage)
-  - [Implementations](#implementations)
-    - [Placeholder1](#placeholder1)
-    - [Placeholder2](#placeholder2)
-
 ## Installation/Usage
 ```bash
  $ git clone <repo_url>
