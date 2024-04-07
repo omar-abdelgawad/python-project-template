@@ -1,7 +1,46 @@
 [build-system]
-requires = ["setuptools>=42.0", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "mypackagename"
+dynamic = ["version"]
+dependencies = [
+    "requests"
+    ]
+requires-python = ">=3.8"
+authors = [
+  {name = "Omar Abdelgawad", email = "pradyun@example.com"},
+  {name = "Tzu-Ping Chung", email = "tzu-ping@example.com"},
+]
+description = "A package for image to image translation using GANs"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["image-to-image-translation", "GAN", "vision", "deep-learning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "ruff",
+    "pytest",
+    "pytest-cov",
+    "tox"
+]
+
+[tool.setuptools.package-data]
+firstpkg = ["py.typed"]
+secondpkg = ["py.typed"]
+
+[project.urls]
+Repository = "https://github.com/me/spam.git"
+
+###################################################################################################
 [tool.pytest.ini_options]
 addopts = "--cov=firstpkg --cov=secondpkg" #include all packages under src directory
 testpaths = [
@@ -21,3 +60,10 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+
+[tool.ruff]
+include = ["*.py"]
+src = ["src"]
+
+[tool.ruff.lint]
+extend-select = ["UP","PL"]
