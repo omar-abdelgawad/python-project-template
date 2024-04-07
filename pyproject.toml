@@ -60,3 +60,10 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+
+[tool.ruff]
+include = ["*.py"]
+src = ["src"]
+
+[tool.ruff.lint]
+extend-select = ["UP","PL"]

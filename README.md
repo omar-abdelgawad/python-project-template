@@ -4,16 +4,17 @@
 <!-- [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
 
 # Project Name
-This is a template for a python project with:. It has setup.cfg and pyproject.toml with some fields to fill in. It also has tox configured, docs dir for github pages, .github folder with actions configured and more.  
-Please Note that tox is configured with python 3.8,3.9, and 3.10. Feel free to reconfigure everything to your need.
-- the src layout
-- setuptools backend (setup.py and setup.cfg)
+This is a modern template for a python project with the pyproject.toml with some fields to change based on project. It also has tox configured, docs dir for github pages, .github dir with tox-gh-actions configured and more.  
 - pyproject.toml
+- setuptools backend (setup.py and setup.cfg)
+- the src layout
 - tox configured
 - docs dir for github pages with a tests.yml ready
-- .github dir with 
+- .github dir with a tests.yml configured with tox-gh-actions
+- tox configured with pytest, ruff, and mypy
 - tests dir for pytest 
 
+Please Note that tox is configured with python 3.8,3.9, and 3.10. Feel free to reconfigure everything to your need.
 
 ## Installation/Usage
 ```bash
@@ -23,6 +24,13 @@ Please Note that tox is configured with python 3.8,3.9, and 3.10. Feel free to r
  $ source venv/bin/activate
  $ pip install -e ".[dev]"
 ``` 
+
+## Testing with tox
+Just running `tox` with no args should work.
+```bash
+ $ tox
+```
+tox creates virtual environments and runs all of pytest, ruff, and mypy.
 ## Package(s)
 
 ### package1
