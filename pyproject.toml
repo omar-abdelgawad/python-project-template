@@ -27,7 +27,7 @@ classifiers = [
 [project.optional-dependencies]
 dev = [
     "mypy",
-    "pylint",
+    "ruff",
     "pytest",
     "pytest-cov",
     "tox"
