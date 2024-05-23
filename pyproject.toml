@@ -30,7 +30,8 @@ dev = [
     "ruff",
     "pytest",
     "pytest-cov",
-    "tox"
+    "tox",
+    "pre-commit",
 ]
 
 [tool.setuptools.package-data]
