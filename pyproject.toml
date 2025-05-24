@@ -2,8 +2,8 @@
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-#[tool.setuptools.packages.find]
-#where = ["src"]  # list of folders that contain the packages (["."] by default)
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
 
 [project]
 name = "mypackagename"
@@ -11,31 +11,29 @@ dynamic = ["version"]
 dependencies = [
     "requests"
     ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 authors = [
   {name = "Omar Abdelgawad", email = "pradyun@example.com"},
-  {name = "Tzu-Ping Chung", email = "tzu-ping@example.com"},
 ]
-description = "A package for image to image translation using GANs"
+description = "A package for bla bla."
 readme = "README.md"
 license = {file = "LICENSE"}
 keywords = ["image-to-image-translation", "GAN", "vision", "deep-learning"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10"
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "mypy",
-    "ruff",
-    "pytest",
-    "pytest-cov",
-    "tox",
-    "pre-commit",
-]
+[dependency-groups]
+dev = ["mypy", "ruff", "pytest", "pytest-cov", "tox", "pre-commit"]
+
+# # have to install it with `uv sync --extra bar`
+# [project.optional-dependencies]
+# bar = [
+#     "cowsay",
+# ]
 
 [tool.setuptools.package-data]
 firstpkg = ["py.typed"]
@@ -70,3 +68,4 @@ src = ["src"]
 
 [tool.ruff.lint]
 extend-select = ["UP","I"]
+
