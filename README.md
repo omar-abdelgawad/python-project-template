@@ -15,7 +15,7 @@ This is a modern template for a python project with the pyproject.toml with some
 - tests dir for pytest 
 - justfile for running commands
 
-Please Note that tox is configured with python 3.8,3.9, and 3.10. Feel free to reconfigure everything to your need.
+Please Note that tox is configured with python 3.10,3.11, and 3.12. Feel free to reconfigure everything to your need.
 
 ## Prerequisites
 1. Make sure [uv](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) is installed. Here is the install script on macOS and Linux
