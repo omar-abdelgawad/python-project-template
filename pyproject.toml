@@ -25,7 +25,8 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
 ]
-
+[tool.setuptools.dynamic]
+version = {attr = "mypackagename.__version__"}  # any module attribute compatible with ast.literal_eval
 [dependency-groups]
 dev = ["mypy", "ruff", "pytest", "pytest-cov", "tox", "pre-commit"]
 
